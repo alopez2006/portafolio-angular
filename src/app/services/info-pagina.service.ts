@@ -7,17 +7,16 @@ import { InfoPagina } from '../interfaces/info-pagina.interface';
 })
 export class InfoPaginaService {
 
-  info:InfoPagina= {};
-  cargada:boolean=false;
+  info: InfoPagina = {};
+  cargada = false;
 
   // private http:HttpClient para peticiones REST, servicios externos
-  constructor(private http:HttpClient) { 
+  constructor(private http: HttpClient) {
     // Leer archivo json
-    this.http.get("assets/data/data-pagina.json")
+    this.http.get('assets/data/data-pagina.json')
       .subscribe((resp: InfoPagina) => {
         this.cargada = true;
         this.info = resp;
-        
         console.log(resp);
         console.log(resp['facebook']);
         console.log(resp.facebook);
