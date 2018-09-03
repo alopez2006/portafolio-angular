@@ -1,9 +1,11 @@
 <!-- <div class="ae-container-fluid ae-container-fluid--inner rk-main"> -->
   <div class="animated fadeIn ae-grid au-xs-ta-center au-mb-4">
-    <div *ngFor="let equipo of infoPagina.equipo" class="ae-grid__item item-lg-4 ae-kappa au-mb-3"><img src="{{ equipo.url }}" alt="" class="au-mb-3">
+    <div *ngFor="let equipo of infoEquipo.equipos" class="ae-grid__item item-lg-4 ae-kappa au-mb-3">
+      <img src="{{ equipo.url }}" alt="" class="au-mb-3">
       <h5 class="ae-u-bolder au-mt-2">{{ equipo.nombre }}</h5>
       <p class="ae-u-bolder au-mb-3">{{ equipo.subtitulo }}</p>
-      <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">{{ equipo.frase }}</p><a href="#0" class="ae-u-bolder au-underline">{{ equipo.twitter }}</a>
+      <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">{{ equipo.frase }}</p>
+      <a target="_blank" href="{{ equipo.twitter }}" class="ae-u-bolder au-underline">{{ equipo.twitter }}</a>
     </div>    
   </div>
   <div class="ae-grid au-pt-2">

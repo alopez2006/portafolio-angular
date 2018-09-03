@@ -40,3 +40,9 @@
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
   }
+
+/* Animación de cargando */
+svg path,
+  svg rect{
+    fill: black;
+  }
